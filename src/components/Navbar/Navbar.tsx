@@ -13,10 +13,13 @@ export default function Navbar() {
         <nav className="bg-white shadow sticky top-0 z-50">
             <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
                 <Link to="/" className="text-xl font-bold text-blue-700">
-                    QR App
+                    QR Code App
                 </Link>
 
                 <div className="space-x-4">
+                    <Link to="/qr-code-generator" className={linkClass("/qr-code-generator")}>
+                        Generate QR Code
+                    </Link>
                     <Link to="/about" className={linkClass("/about")}>
                         About
                     </Link>
