@@ -10,7 +10,7 @@ export default function Navbar() {
         }`;
 
     return (
-        <nav className="bg-white shadow sticky top-0 z-50">
+        <nav className="bg-gray-100 shadow sticky top-0 z-50 border-t border-gray-300">
             <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
                 <Link to="/" className="text-xl font-bold text-blue-700">
                     QR Code App
