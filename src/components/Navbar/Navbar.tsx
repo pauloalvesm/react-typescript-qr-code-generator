@@ -14,12 +14,10 @@ export default function Navbar() {
     return (
         <nav className="bg-gray-100 shadow sticky top-0 z-50 border-t border-gray-300">
             <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-                {/* Logo/Title */}
                 <Link to="/" className="text-xl font-bold text-blue-700">
                     QR Code App
                 </Link>
 
-                {/* Desktop Menu */}
                 <div className="hidden md:flex space-x-4">
                     <Link to="/qr-code-generator" className={linkClass("/qr-code-generator")}>
                         Generate QR Code
@@ -29,7 +27,6 @@ export default function Navbar() {
                     </Link>
                 </div>
 
-                {/* Mobile Hamburger Icon */}
                 <button
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     className="md:hidden text-gray-700"
@@ -42,16 +39,15 @@ export default function Navbar() {
                         className="w-6 h-6"
                     >
                         <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M4 6h16M4 12h16M4 18h16"
                         />
                     </svg>
                 </button>
             </div>
 
-            {/* Mobile Menu (Dropdown) */}
             <div
                 className={`md:hidden ${isMobileMenuOpen ? "block" : "hidden"} bg-gray-200 space-y-4 px-4 py-3`}
             >
