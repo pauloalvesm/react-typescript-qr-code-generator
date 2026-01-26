@@ -1,18 +1,26 @@
 import { useState } from "react";
 import { useQrCode } from "../../hooks/useQrCode";
 import QrCodeViewer from "./QrCodeViewer";
+import notificationService from "../../utils/notificationService";
 import "../../index.css";
 
 export default function QrCodeGenerator() {
     const [text, setText] = useState("");
     const { qrCodeImage, loading, error, generateQrCode, clear } = useQrCode();
 
-    const handleGenerate = () => {
+    const handleGenerate = async () => {
         if (!text.trim()) {
             alert("Please enter text to generate the QR Code");
             return;
         }
-        generateQrCode(text);
+
+        try {
+            await generateQrCode(text);
+            notificationService.success("QR Code generated successfully!");
+        } catch (err) {
+            notificationService.error("Failed to generate QR Code");
+        }
+
     };
 
     const handleClear = () => {
