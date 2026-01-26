@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
+import { HiHome, HiInformationCircle, HiQrcode } from "react-icons/hi";
 
 export default function Navbar() {
     const { pathname } = useLocation();
@@ -14,16 +15,23 @@ export default function Navbar() {
     return (
         <nav className="bg-gray-100 shadow sticky top-0 z-50 border-t border-gray-300">
             <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-                <Link to="/" className="text-xl font-bold text-blue-700">
-                    QR Code App
+                <Link to="/" className="text-xl font-bold text-blue-700 flex items-center gap-2">
+                <HiHome className="w-5 h-5" />
+                    QR Code Generator
                 </Link>
 
                 <div className="hidden md:flex space-x-4">
                     <Link to="/qr-code-generator" className={linkClass("/qr-code-generator")}>
-                        Generate QR Code
+                        <span className="flex items-center gap-2">
+                            <HiQrcode className="w-6 h-6" />
+                            QR Code
+                        </span>
                     </Link>
                     <Link to="/about" className={linkClass("/about")}>
-                        About
+                        <span className="flex items-center gap-2">
+                            <HiInformationCircle className="w-6 h-6" />
+                            About
+                        </span>
                     </Link>
                 </div>
 

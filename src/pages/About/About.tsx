@@ -1,8 +1,11 @@
+import { HiInformationCircle } from "react-icons/hi";
+
 export default function About() {
     return (
         <div className="flex flex-col items-center justify-start px-4 pt-4">
             <div className="bg-white shadow-lg rounded-2xl p-8 max-w-2xl w-full border border-gray-300">
-                <h2 className="text-3xl sm:text-3xl font-bold text-blue-700 mb-6 text-center">
+                <h2 className="text-3xl sm:text-3xl font-bold text-blue-700 mb-6 text-center flex items-center justify-center gap-2">
+                    <HiInformationCircle className="w-7 h-7" />
                     About the Application
                 </h2>
 
