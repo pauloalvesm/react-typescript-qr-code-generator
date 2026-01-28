@@ -11,7 +11,7 @@
 
 ## 💻 Project
 
-Repository with a web application to simulate a `QR Code` generator.
+Repository with a frontend application to simulate a `QR Code` generator
 
 This application integrates with the backend: [QR Code Generator API](https://github.com/pauloalvesm/dotnet-qr-code-generator-api) 
 
@@ -48,7 +48,7 @@ This project was developed using the following technologies:
 git clone https://github.com/pauloalvesm/react-typescript-qr-code-generator.git
 
 # Navigate to the project folder
-cd eact-typescript-qr-code-generator
+cd react-typescript-qr-code-generator
 
 # Restore dependencies
 npm install
